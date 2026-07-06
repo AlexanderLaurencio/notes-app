@@ -31,7 +31,7 @@ export async function addNote(note: Note) {
     let db: any = await openDB();
     let transaction = db.transaction("Notes","readwrite");
     let objectStore = transaction.objectStore("Notes");
-    let request = objectStore.add(note);
+    objectStore.add(note);
 
     transaction.onerror = () => console.error("Error while adding a new note"); 
 };
@@ -40,7 +40,7 @@ export async function deleteNote(id: number) {
     let db: any = await openDB();
     let transaction = db.transaction("Notes","readwrite");
     let objectStore = transaction.objectStore("Notes");
-    let request = objectStore.delete(id);
+    objectStore.delete(id);
 
     transaction.onerror = () => console.error("Error while deleting a note");
 };
@@ -49,7 +49,7 @@ export async function updateNote(note: Note) {
     let db: any = await openDB();
     let transaction = db.transaction("Notes","readwrite");
     let objectStore = transaction.objectStore("Notes");
-    let request = objectStore.put(note);
+    objectStore.put(note);
 
     transaction.onerror = () => console.log("Error while updating a note");
 };

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import NoteList from "./NoteList";
 import Button from "./Button";
 import { addNote, deleteNote, getNotes, updateNote } from "../services/IndexedDB";
-import type Note from "./Note";
 import AddNoteWindow from "./AddNoteWindow";
 
 interface NoteType {
