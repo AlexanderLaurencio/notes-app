@@ -1,5 +1,9 @@
 import { useState } from "react";
 import Button from "./Button";
+import save from "../assets/save.svg"
+import cross from "../assets/cross.svg"
+import pencil from "../assets/pencil.svg"
+
 
 interface Note {
     id: number,
@@ -30,15 +34,15 @@ function Note(note: Note) {
             
             {isEditing 
             ?<Button onClick={() => {setIsEditing(!isEditing); note.onUpdate({id: note.id, title: title, description: description})}} className="note_save_button">
-                <img src="src/assets/save.svg" alt="save" />
+                <img src={save} alt="save" />
             </Button>
 
             :<Button onClick={() => setIsEditing(!isEditing)} className="note_edit_button">
-                <img src="src/assets/pencil.svg" alt="pencil" />
+                <img src={pencil} alt="pencil" />
              </Button>}
 
             <Button onClick={() => note.onDelete(note.id)} className="note_delete_button">
-                <img src="src/assets/cross.svg" alt="cross" />
+                <img src={cross} alt="cross" />
             </Button>
         </article>
     )

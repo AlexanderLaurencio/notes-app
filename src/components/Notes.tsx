@@ -3,6 +3,7 @@ import NoteList from "./NoteList";
 import Button from "./Button";
 import { addNote, deleteNote, getNotes, updateNote } from "../services/IndexedDB";
 import AddNoteWindow from "./AddNoteWindow";
+import plus from "../assets/plus.svg"
 
 interface NoteType {
     id: number,
@@ -41,7 +42,7 @@ function Notes() {
         <main className="notes">
             {notes && <NoteList notesProp={notes} onDelete={onDeleteNote} onUpdate={onUpdateNote}/>}
             <Button onClick={openAddNoteWindow} className="button_add_note">
-                <img src="src/assets/plus.svg" alt="plus" />
+                <img src={plus} alt="plus" />
             </Button>
             {isAddingNote && <AddNoteWindow onAddNewNote={onAddNewNote} openAddNoteWindw={openAddNoteWindow}/>}
         </main>

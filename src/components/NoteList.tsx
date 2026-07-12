@@ -14,7 +14,7 @@ interface NoteProps {
 
 function NoteList(noteArray: NoteProps) {
     return (
-        <section className="notelist">
+        <section className="note_list">
             {noteArray.notesProp.map(note => 
             <Note key={note.id} id={note.id} title={note.title} description={note.description} 
             onDelete={noteArray.onDelete} onUpdate={noteArray.onUpdate}/>)}

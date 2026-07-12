@@ -62,7 +62,7 @@
 .note_list{
   display: flex;
   flex-direction: column;
-  gap: var(--space-x) 0;
+  gap: var(--space-xs) 0;
 }
 
 .note{
