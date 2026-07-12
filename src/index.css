@@ -67,7 +67,7 @@
 
 .note{
   display: grid;
-  grid-template-columns: 87% 6% 6%;
+  grid-template-columns: 1fr min-content min-content;
   grid-template-rows: 50% 50%;
   grid-template-areas: 
   "title edit_button delete_button"
@@ -96,6 +96,7 @@
 .note_title, .note_description{
   overflow-x: hidden;
   text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 .note_edit_button, .note_save_button{
@@ -109,17 +110,19 @@
 }
 
 button{
+  height: 100%;
   border: 0;
   border-radius: var(--border-radius-small);
   padding: var(--space-l);
+  width: 45px;
 }
 
 button:hover{
   opacity: .8;
 }
 
-img{
-  max-height: 100%;
+button img{
+  height: 100%;
   max-width: 100%;
 }
 
