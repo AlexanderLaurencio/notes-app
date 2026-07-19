@@ -201,6 +201,7 @@ button img{
 
 .form button{
   font-size: var(--font-size-small);
+  width: min-content;
 }
 
 .form_cancel_button{
